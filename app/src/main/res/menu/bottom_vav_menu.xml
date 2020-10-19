@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item-->
+<!--        android:id="@+id/withdrawal_nav_btn"-->
+<!--        android:icon="@drawable/withdrawal_icon"-->
+<!--        android:title="withdrawal" />-->
+
+
+    <item
+        android:id="@+id/profile_nav_btn"
+        android:title="profile"
+        android:icon="@drawable/profile_icon"/>
+
+    <item
+        android:id="@+id/withdrawal_nav_btn"
+        android:title="withdrawal"
+        android:icon="@drawable/withdrawal_icon"/>
+
+    <item android:id="@+id/deposit_nav_btn"
+          android:title="deposit"
+          android:icon="@drawable/deposit_icon"/>
+
+    <item android:id="@+id/periodic_deposit_nav_btn"
+          android:title="periodic deposit"
+          android:icon="@drawable/periodic_deposit_icon"/>
+</menu>

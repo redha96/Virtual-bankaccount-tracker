@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PeriodicDeposit">
+
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/three_month_deposit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_corner_background_purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/three_month_deposit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Three month deposit"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/amount_of_three_month_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amount :"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/three_month_deposit_text" />
+
+                <EditText
+                    android:id="@+id/amount_of_three_month_deposit_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="enter the amount"
+                    app:backgroundTint="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_three_month_deposit_text_view"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_three_month_deposit_text_view"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_three_month_deposit_text_view"/>
+
+                <TextView
+                    android:id="@+id/gain_amount_of_three_month_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="will get 3%"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_three_month_deposit_edit_text"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_three_month_deposit_edit_text"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_three_month_deposit_edit_text"/>
+
+                <Button
+                    android:id="@+id/three_month_deposit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_background_orange"
+                    android:enabled="true"
+                    android:onClick="periodicDepositBtnOnClickListener"
+                    android:padding="8dp"
+                    android:text="Deposit"
+                    android:textColor="@color/purple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/amount_of_three_month_deposit_edit_text" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/six_month_deposit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_corner_background_purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/three_month_deposit_layout"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/six_month_deposit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="six month deposit"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/amount_of_six_month_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amount :"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/six_month_deposit_text" />
+
+                <EditText
+                    android:id="@+id/amount_of_six_month_deposit_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="enter the amount"
+                    app:backgroundTint="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_six_month_deposit_text_view"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_six_month_deposit_text_view"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_six_month_deposit_text_view" />
+
+                <TextView
+                    android:id="@+id/gain_amount_of_six_month_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="will get 4%"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_six_month_deposit_edit_text"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_six_month_deposit_edit_text"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_six_month_deposit_edit_text"/>
+
+
+                <Button
+                    android:id="@+id/six_month_deposit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_background_orange"
+                    android:enabled="true"
+                    android:onClick="periodicDepositBtnOnClickListener"
+                    android:padding="8dp"
+                    android:text="Deposit"
+                    android:textColor="@color/purple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/amount_of_six_month_deposit_edit_text" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nine_month_deposit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_corner_background_purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/six_month_deposit_layout"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/nine_month_deposit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nine month deposit"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/amount_of_nine_month_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amount :"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nine_month_deposit_text" />
+
+                <EditText
+                    android:id="@+id/amount_of_nine_month_deposit_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="enter the amount"
+                    app:backgroundTint="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_nine_month_deposit_text_view"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_nine_month_deposit_text_view"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_nine_month_deposit_text_view"/>
+
+
+                <TextView
+                    android:id="@+id/gain_amount_of_nine_month_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="will get 5%"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_nine_month_deposit_edit_text"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_nine_month_deposit_edit_text"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_nine_month_deposit_edit_text"/>
+
+
+
+                <Button
+                    android:id="@+id/nine_month_deposit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_background_orange"
+                    android:enabled="true"
+                    android:onClick="periodicDepositBtnOnClickListener"
+                    android:padding="8dp"
+                    android:text="Deposit"
+                    android:textColor="@color/purple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/amount_of_nine_month_deposit_edit_text" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/one_year_deposit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_corner_background_purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nine_month_deposit_layout"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/one_year_deposit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="one year deposit"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/amount_of_one_year_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amount :"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/one_year_deposit_text" />
+
+                <EditText
+                    android:id="@+id/amount_of_one_year_deposit_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="enter the amount"
+                    app:backgroundTint="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_one_year_deposit_text_view"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_one_year_deposit_text_view"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_one_year_deposit_text_view" />
+
+                <TextView
+                    android:id="@+id/gain_amount_of_one_year_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="will get 6.5%"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_one_year_deposit_edit_text"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_one_year_deposit_edit_text"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_one_year_deposit_edit_text"/>
+
+
+
+                <Button
+                    android:id="@+id/one_year_deposit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_background_orange"
+                    android:enabled="true"
+                    android:onClick="periodicDepositBtnOnClickListener"
+                    android:padding="8dp"
+                    android:text="Deposit"
+                    android:textColor="@color/purple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/amount_of_one_year_deposit_edit_text" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/two_year_deposit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_corner_background_purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/one_year_deposit_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/two_year_deposit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="two year deposit"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/amount_of_two_year_deposit_text_view"/>
+
+                <TextView
+                    android:id="@+id/amount_of_two_year_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amount :"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/two_year_deposit_text"
+                    app:layout_constraintEnd_toStartOf="@id/amount_of_two_year_deposit_edit_text"/>
+
+                <EditText
+                    android:id="@+id/amount_of_two_year_deposit_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="enter the amount"
+                    app:backgroundTint="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_two_year_deposit_text_view"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_two_year_deposit_text_view"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_two_year_deposit_text_view" />
+
+
+                <TextView
+                    android:id="@+id/gain_amount_of_two_year_deposit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="will get 8.5%"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toEndOf="@id/amount_of_two_year_deposit_edit_text"
+                    app:layout_constraintTop_toTopOf="@id/amount_of_two_year_deposit_edit_text"
+                    app:layout_constraintBottom_toBottomOf="@id/amount_of_two_year_deposit_edit_text"/>
+
+
+
+                <Button
+                    android:id="@+id/two_year_deposit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_background_orange"
+                    android:enabled="true"
+                    android:onClick="periodicDepositBtnOnClickListener"
+                    android:padding="8dp"
+                    android:text="Deposit"
+                    android:textColor="@color/purple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/amount_of_two_year_deposit_edit_text" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:itemTextColor="@drawable/selector_for_main"
+        app:itemIconTint="@drawable/selector_for_main"
+        app:menu="@menu/bottom_vav_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/logout"
+        android:title="log out"/>
+
+    <item
+        android:id="@+id/support"
+        android:title="support">
+
+        <menu>
+
+            <item
+                android:id="@+id/error_with_withdrawal"
+                android:title="error with withdrawal"/>
+
+            <item
+                android:id="@+id/error_with_deposit"
+                android:title="error with deposit"/>
+
+            <item
+                android:id="@+id/error_with_periodic_deposit"
+                android:title="error with periodic deposit"/>
+
+            <item
+                android:id="@+id/other_error"
+                android:title="have another error"/>
+
+
+        </menu>
+    </item>
+
+</menu>

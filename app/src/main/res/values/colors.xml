@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+
+    <color name="colorPrimary">#f8d253</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+<!--    <color name="purple">#ff4090</color>-->
+    <color name="purple">#842c6d</color>
+
+
+<!--    <color name="purple">#e1bee7</color>-->
+<!--    <color name="purpleNavColor">#ab47bc</color>-->
+<!--    <color name="purpleBtn">#9c27b0</color>-->
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="orange">#f4a743</color>
+
+</resources>
